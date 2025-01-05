@@ -6,6 +6,7 @@ import 'package:crm_prasarana_mobile/common/components/will_pop_widget.dart';
 import 'package:crm_prasarana_mobile/core/route/route.dart';
 import 'package:crm_prasarana_mobile/core/service/api_service.dart';
 import 'package:crm_prasarana_mobile/core/utils/local_strings.dart';
+import 'package:crm_prasarana_mobile/core/utils/url_container.dart';
 import 'package:crm_prasarana_mobile/features/auth/controller/login_controller.dart';
 import 'package:crm_prasarana_mobile/features/auth/repo/auth_repo.dart';
 import 'package:flutter/material.dart';
@@ -216,6 +217,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                             controller.loginUser();
                                           }
                                         }),
+                                const SizedBox(height: Dimensions.space20),
+                                const Text(UrlContainer.domainUrl,
+                                    style: TextStyle(fontSize: 7)),
                               ],
                             ),
                           ),
